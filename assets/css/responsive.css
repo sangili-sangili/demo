@@ -1,0 +1,287 @@
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .row h2 {
+        font-size: 1.5rem;
+    }
+
+    .row p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .row h2 {
+        font-size: 1.2rem;
+    }
+
+    .row p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* ===============================
+   Mobile Navigation
+================================ */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hamburger icon */
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    width: 26px;
+    height: 3px;
+    background: #000;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    top: 8px;
+}
+/* ===============================
+   Mobile Navigation Fix
+================================ */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hamburger icon */
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    width: 26px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    top: 8px;
+}
+
+/* ===============================
+   Mobile Screen
+================================ */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    /* FORCE nav hidden initially */
+    .nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: none !important; /* IMPORTANT FIX */
+        flex-direction: column;
+        padding: 25px 0;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav a {
+        padding: 14px 0;
+        font-size: 18px;
+        color: #000;
+        text-decoration: none;
+    }
+
+    /* SHOW only when clicked */
+    .nav.show {
+        display: flex !important;
+    }
+
+    /* Hide desktop CTA */
+    .btn-primary {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .about-flex,
+    .services-flex {
+        flex-direction: column;
+    }
+
+    .services-intro,
+    .services-cards {
+        width: 100%;
+    }
+
+    .services-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card.large {
+        grid-row: auto;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .service-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .service-icon img {
+        width: 60px;
+    }
+
+    .service-card.large .service-icon {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cta-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .cta-image {
+        margin: 20px 0 0;
+    }
+
+    .cta-image img {
+        max-width: 200px;
+    }
+
+    .cta-content h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 992px) {
+    .works-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .works-content {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .works-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .works-content {
+        grid-column: auto;
+    }
+
+    .work-card {
+        width: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .works-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .works-content.center {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .info-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .info-content h2 {
+        font-size: 24px;
+    }
+
+    .info-content p {
+        max-width: 100%;
+    }
+}
+
+
+ /* Mobile adjustments */
+ @media (max-width: 768px) {
+    .cta-box h2 {
+      font-size: 24px;
+    }
+  }
